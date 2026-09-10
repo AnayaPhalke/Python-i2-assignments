@@ -1,0 +1,24 @@
+# Program to check whether a triangle is right-angled
+
+def is_right_angled(a, b, c):
+    # Arrange sides so that c is the largest side
+    sides = sorted([a, b, c])
+    a, b, c = sides
+
+    # Check Pythagorean theorem
+    if a**2 + b**2 == c**2:
+        return True
+    else:
+        return False
+
+
+# Accept three sides from the user
+side1 = float(input("Enter the first side: "))
+side2 = float(input("Enter the second side: "))
+side3 = float(input("Enter the third side: "))
+
+# Check the triangle
+if is_right_angled(side1, side2, side3):
+    print("The triangle is a right-angled triangle.")
+else:
+    print("The triangle is not a right-angled triangle.")
