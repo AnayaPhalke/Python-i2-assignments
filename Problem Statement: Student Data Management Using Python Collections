@@ -1,0 +1,60 @@
+# Student Data Management using Dictionary, Tuple, and List
+
+# Tuple: stores fixed attributes of a student
+student1 = (101, "Rahul", "Computer Science", 85)
+student2 = (102, "Priya", "Information Technology", 90)
+student3 = (103, "Amit", "Electronics", 78)
+
+# List: stores multiple student tuples
+students_list = [student1, student2, student3]
+
+# Dictionary: stores student records using Roll Number as key
+students = {
+    student1[0]: {
+        "Name": student1[1],
+        "Branch": student1[2],
+        "Marks": student1[3]
+    },
+    student2[0]: {
+        "Name": student2[1],
+        "Branch": student2[2],
+        "Marks": student2[3]
+    },
+    student3[0]: {
+        "Name": student3[1],
+        "Branch": student3[2],
+        "Marks": student3[3]
+    }
+}
+
+# 1. Add a new student record
+students[104] = {
+    "Name": "Sneha",
+    "Branch": "Mechanical Engineering",
+    "Marks": 88
+}
+
+print("After adding a new student:")
+print(students)
+
+# 2. Delete an existing student record
+del students[102]
+
+print("\nAfter deleting Roll Number 102:")
+print(students)
+
+# 3. Update the details of a student
+students[103]["Name"] = "Amit Kumar"
+students[103]["Marks"] = 82
+
+print("\nAfter updating Roll Number 103:")
+print(students)
+
+# 4. Display final student records
+print("\nFinal Student Records:")
+for roll_no, details in students.items():
+    print("Roll Number:", roll_no)
+    print("Name:", details["Name"])
+    print("Branch:", details["Branch"])
+    print("Marks:", details["Marks"])
+    print("-" * 30)
