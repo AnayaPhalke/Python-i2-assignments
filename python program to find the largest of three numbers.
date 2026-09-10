@@ -1,0 +1,20 @@
+# Program to find the largest of three numbers
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+c = int(input("Enter third number: "))
+
+if a >= b and a >= c:
+    largest = a
+elif b >= a and b >= c:
+    largest = b
+else:
+    largest = c
+
+print("The largest number is:", largest)
+
+Example Output
+Enter first number: 25
+Enter second number: 40
+Enter third number: 30
+The largest number is: 40
